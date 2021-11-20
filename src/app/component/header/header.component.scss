@@ -1,0 +1,41 @@
+#datLichKham{
+    background-color: #01A0C7;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+#datLichKham:hover{
+    background-color: #3fb8d6;
+    transition: .3s;
+}
+ul li{
+    color: #8f8f8f;
+}
+
+@media screen and (min-width: 1025px) {
+    #xxx{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .menuDesktop{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 1920px) {
+    #trangchu{
+        margin-left: 250px;
+    }
+    #datLichKham{
+        margin-left: 400px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    #trangchu{
+        margin-left: 30px;
+    }
+    #datLichKham{
+        margin-left: 80px;
+    }
+}
+

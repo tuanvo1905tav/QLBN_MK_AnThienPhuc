@@ -1,0 +1,64 @@
+<div class="container-fluid px-0">
+    <ul nz-menu nzMode="horizontal" class="menuDesktop" style="border-bottom: none;">
+        <li nz-menu-item nzDisabled>
+            <img src="../../../assets/images/logo.png" alt="logo" width="255px" height="46.25px">
+        </li>
+        <li nz-menu-item routerLink="" id="trangchu">TRANG CHỦ</li>
+        <li nz-menu-item routerLink="matkinh">MẮT KÍNH</li>
+        <li nz-menu-item routerLink="">VỀ CHÚNG TÔI</li>
+        <li nz-submenu nzTitle="DỊCH VỤ">
+            <ul>
+                <li nz-menu-group>
+                    <ul>
+                        <li nz-menu-item routerLink="">Option 1</li>
+                        <li nz-menu-item routerLink="">Option 2</li>
+                        <li nz-menu-item routerLink="">Option 3</li>
+                        <li nz-menu-item routerLink="">Option 4</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li nz-menu-item routerLink="">HƯỚNG DẪN</li>
+        <li nz-menu-item routerLink="">LIÊN HỆ</li>
+        <li nz-menu-item routerLink="">GIỎ HÀNG</li>
+        <a id="datLichKham">ĐẶT LỊCH KHÁM</a>
+    </ul>
+    <!--Menu responsive-->
+    <div class="container-fluid" id="xxx">
+        <div class="row">
+            <div class="col-10">
+                <a href="#">
+                    <img src="../../../assets/images/logo.png" alt="logo" width="255px" height="46.25px">
+                </a>
+            </div>
+            <div class="col-2" style="padding-top: 5px;">
+                <a nz-dropdown [nzDropdownMenu]="menu">
+                    <i class="fa fa-bars" aria-hidden="true" style="font-size: 35px;"></i>
+                </a>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu nzSelectable>
+                        <li nz-menu-item routerLink="">TRANG CHỦ</li>
+                        <li nz-menu-item routerLink="matkinh">MẮT KÍNH</li>
+                        <li nz-menu-item routerLink="">VỀ CHÚNG TÔI</li>
+                        <li nz-submenu nzTitle="DỊCH VỤ">
+                            <ul>
+                                <li nz-menu-group>
+                                    <ul>
+                                        <li nz-menu-item routerLink="">Option 1</li>
+                                        <li nz-menu-item routerLink="">Option 2</li>
+                                        <li nz-menu-item routerLink="">Option 3</li>
+                                        <li nz-menu-item routerLink="">Option 4</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li nz-menu-item routerLink="">HƯỚNG DẪN</li>
+                        <li nz-menu-item routerLink="">LIÊN HỆ</li>
+                        <li nz-menu-item routerLink="">GIỎ HÀNG</li>
+                        <li nz-menu-item routerLink="">ĐẶT LỊCH KHÁM</li>
+                    </ul>
+                </nz-dropdown-menu>
+            </div>
+        </div>
+    </div>
+</div>

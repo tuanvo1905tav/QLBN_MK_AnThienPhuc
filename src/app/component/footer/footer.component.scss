@@ -1,0 +1,58 @@
+.footer{
+    background-color: #01A0C7;
+    width: 100%;
+    height: 550px;
+    color: #ffffff;
+}
+.copyRight{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(196, 196, 196);
+    text-align: center;
+    font-size: smaller;
+    color: #01A0C7;
+    line-height: 30px;
+}
+.logo{
+    line-height: 550px;
+}
+span{
+    font-size: 22px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.footer i{
+    margin-right: 10px !important;
+}
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer a:hover{
+    color: #1f1f1f;
+    transition: .3s;
+}
+.footer ul{
+    list-style: none;
+    padding: 0;
+}
+.footer ul li{
+    line-height: 50px;
+    cursor: pointer;
+}
+.footer ul li:hover{
+    color: #1f1f1f;
+    transition: .3s;
+}
+@media screen and (max-width: 1025px) {
+    .footer{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .footer img{
+        width: 297.6px;
+        height: 152.3px;
+    }
+}
