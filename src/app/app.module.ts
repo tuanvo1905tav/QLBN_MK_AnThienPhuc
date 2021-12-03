@@ -19,6 +19,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { CtMatKinhComponent } from './component/ct-mat-kinh/ct-mat-kinh.component';
+import { ShowSPComponent } from './component/show-sp/show-sp.component';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 registerLocaleData(vi);
 
@@ -31,7 +35,8 @@ registerLocaleData(vi);
     TrangchuComponent,
     Page404Component,
     MatkinhComponent,
-    CtMatKinhComponent
+    CtMatKinhComponent,
+    ShowSPComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,9 @@ registerLocaleData(vi);
     HttpClientModule,
     BrowserAnimationsModule,
     NzDropDownModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzInputNumberModule,
+    LoadingBarRouterModule
   ],
   providers: [{ provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]

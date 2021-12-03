@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CtMatKinhComponent } from './component/ct-mat-kinh/ct-mat-kinh.component';
 import { MatkinhComponent } from './component/matkinh/matkinh.component';
 import { Page404Component } from './component/page404/page404.component';
+import { ShowSPComponent } from './component/show-sp/show-sp.component';
 import { TrangchuComponent } from './component/trangchu/trangchu.component';
 
 const routes: Routes = [
   { path: '', component: TrangchuComponent },
   { path: 'matkinh', component: MatkinhComponent },
   { path: 'matkinh/chiTietMatKinh', component: CtMatKinhComponent },
+  { path: 'matkinh/allSanPham', component: ShowSPComponent },
   { path: '**', component: Page404Component },
 
 ];

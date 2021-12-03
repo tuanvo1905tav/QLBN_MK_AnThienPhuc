@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { DataMauService } from 'src/app/service/data-mau.service';
 
 @Component({
-  selector: 'app-matkinh',
-  templateUrl: './matkinh.component.html',
-  styleUrls: ['./matkinh.component.scss']
+  selector: 'app-show-sp',
+  templateUrl: './show-sp.component.html',
+  styleUrls: ['./show-sp.component.scss'],
 })
-export class MatkinhComponent implements OnInit {
+export class ShowSPComponent implements OnInit {
 
   constructor(private sanPham: DataMauService) { }
 
   ngOnInit(): void {
   }
   data = this.sanPham.sanPham
+
 }

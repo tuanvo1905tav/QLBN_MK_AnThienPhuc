@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row duongDan">
+    <div class="row duongDan mb-4">
         <p><b>SẢN PHẨM MẮT KÍNH/ </b> <b style="color: #01A0C7;">CHI TIẾT MẮT KÍNH</b></p>
     </div>
     <div class="row">
@@ -12,29 +12,112 @@
             <div class="cardX">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mt-4">
                             <h5><b>Mắt kính XXX Califonia 3.5 độ</b></h5>
                         </div>
-                        <div class="col-12">
+
+                        <div class="col-12 mt-1">
                             <h6 style="color: red;">200.000 Vnđ</h6>
                         </div>
-                        <div class="col-12">
+
+                        <div class="col-12 quaTang mb-4 mt-3">
                             <p><i class="fas fa-gifts"></i> Quà tặng kèm</p>
                             <p>- Hộp kính cao cấp</p>
                             <p>- Khăn lau, nước rửa kính</p>
                         </div>
-                        <div class="col-12">
+
+                        <div class="col-12 px-0">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-2"></div>
+                                    <div class="col-2 px-0">
+                                        <nz-input-number id="inputNumber" [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
+                                    </div>
                                     <div class="col-10">
-                                        <button>THÊM VÀO GIỎ HÀNG</button>
+                                        <button id="themGioHang">THÊM VÀO GIỎ HÀNG</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12"></div>
+
+                        <div class="col-12">
+                            <div class="container-fluid dichVu">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <i class="fas fa-shipping-fast mt-3"></i><br>
+                                        <p>FreeShip <br> Đơn hàng trên 500k</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-toolbox mt-3"></i><br>
+                                        <p>Bảo hành <br> 1 năm lỗi kỹ thuật</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <i class="fas fa-tools mt-3"></i><br>
+                                        <p>Miến phí <br> Sửa chữa trọn đời</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rowpx-2 mt-5">
+        <div class="container-fluid chiTet">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mt-4 mb-4">Mắt kính Canada 3 độ</h3>
+                </div>
+            </div>
+            <div class="row textND">
+                <div class="col-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Độ cận: 3.5</p>
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Chất liệu: kim loại</p>
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Màu sắc: đen, nâu</p>
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Fullbox: tem chống hàng giả, khăn lau</p>
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Bảo hành chính hãng 1 năm</p>
+                                <p><i class="fas fa-hand-point-right" style="color: yellow;"></i> Sửa chữa miễn phí trọn đời</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <p>Hình ảnh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="slogan">
+                            CÓ THỂ BẠN THÍCH
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 text-center mb-5" *ngFor="let item of data1.slice(0, 3);">
+                        <div class="cardSP">
+                          <div class="sanPham text-center">
+                            <img src="../../../assets/images/kinh11.png" alt="Sản phẩm" width="80%" height="80%" style="padding-top: 30px;">
+                          </div>
+                          <div class="moTa">
+                            <br>
+                            <h6>{{item.title}}</h6>
+                            <br>
+                            <p><i class="fas fa-hand-holding-usd"></i>{{item.giaBan}}</p>
+                            <br>
+                            <button id="muaSP">MUA</button>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>

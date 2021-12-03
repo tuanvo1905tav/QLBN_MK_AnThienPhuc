@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataMauService } from 'src/app/service/data-mau.service';
 
 @Component({
   selector: 'app-trangchu',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrangchuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sanPham: DataMauService) { }
 
   ngOnInit(): void {
   }
+  data1 = this.sanPham.sanPham
 }
