@@ -1,0 +1,71 @@
+.duongDan p {
+    border-bottom: 3px solid #01A0C7;
+    padding: 0px;
+    width: 700px;
+}
+
+.cardTong {
+    border-radius: 15px;
+    box-shadow: 5px 5px 26px #d4d4d4;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.cardTwo {
+    border-radius: 15px;
+    box-shadow: 5px 5px 26px #d4d4d4;
+    width: 45%;
+    margin: auto;
+}
+
+.huongDan {
+    width: 80%;
+    margin: 30px auto;
+    text-align: justify;
+}
+
+.huongDan p {
+    margin-bottom: 30px;
+}
+
+.hotLine {
+    width: 250px;
+    background-color: #01A0C7;
+    margin: 30px auto;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.inputContent {
+    margin-bottom: 15px;
+}
+
+.inputContent p {
+    text-align: left;
+    margin-bottom: -1px;
+    color: #01A0C7;
+}
+
+.cardTwo h4 {
+    color: #01A0C7;
+    margin-top: 30px;
+}
+
+.datLich {
+    background-color: #01A0C7;
+    color: #ffffff;
+    border: 0px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 769px) {
+    .cardTwo {
+        width: 90%;
+    }
+    .cardOne {
+        width: 100%;
+    }
+}

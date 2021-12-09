@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row duongDan">
+        <p><b>BỆNH VIỆN MẮT/ </b> <b style="color: #01A0C7;">ĐẶT LỊCH KHÁM</b></p>
+    </div>
+
+    <div class="container-fluid cardTong">
+        <div class="row px-0">
+            <div class="col-md-6 col-sm-12 cardOne text-center">
+                <img src="../../assets/images/logo_trang1.png" alt="Logo" width="203.25" height="94.25" class="mt-4">
+                <div class="huongDan">
+                    <p><i class="fas fa-hand-point-right" style="color: yellow; font-size: 25px;"></i> Lịch hẹn chỉ có hiệu lực khi Quý khách được xác nhận chính thức từ Bệnh viện thông qua điện thoại hoặc Email.</p>
+                    <p><i class="fas fa-hand-point-right" style="color: yellow; font-size: 25px;"></i> Quý khách sử dụng dịch vụ đặt hẹn trực tuyến, vui lòng đặt hẹn ít nhất 24h trước khi đến khám.</p>
+                    <p><i class="fas fa-hand-point-right" style="color: yellow; font-size: 25px;"></i> Quý khách vui lòng cung cấp thông tin chính xác để được hỗ trợ nhanh chóng và kịp thời.</p>
+                    <p><i class="fas fa-hand-point-right" style="color: yellow; font-size: 25px;"></i> Trường hợp khẩn cấp hay có triệu chứng nguy hiểm vui lòng liên hệ trực tiếp cơ sở y tế để được xử lý.</p>
+                </div>
+                <div class="hotLine">
+                    HOTLINE: 0123456789
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 cardTwo mt-3 text-center">
+                <h4>ĐẶT LỊCH KHÁM BỆNH</h4>
+                <div class="inputContent">
+                    <p>Họ tên</p>
+                    <input nz-input placeholder="Nhập họ tên" [(ngModel)]="hoTen" />
+                </div>
+                <div class="inputContent">
+                    <p>Ngày sinh</p>
+                    <nz-date-picker style="width: 100%;"></nz-date-picker>
+                </div>
+                <div class="inputContent">
+                    <p>Địa chỉ</p>
+                    <input nz-input placeholder="Nhập địa chỉ" [(ngModel)]="diaChi" />
+                </div>
+                <div class="inputContent">
+                    <p>Điện thoại</p>
+                    <input nz-input placeholder="Nhập số điện thoại" [(ngModel)]="dienThoai" />
+                </div>
+                <div class="inputContent">
+                    <p>Email</p>
+                    <input nz-input placeholder="abc@gmail.com" [(ngModel)]="email" />
+                </div>
+                <div class="inputContent">
+                    <p>Ngày đặt hẹn</p>
+                    <nz-date-picker style="width: 100%;"></nz-date-picker>
+                </div>
+                <div class="inputContent">
+                    <p>Nội dung khám</p>
+                    <textarea nz-input placeholder="Nhập triệu chứng của bạn" [nzAutosize]="{ minRows: 3, maxRows: 5 }"></textarea>
+                </div>
+                <button type="submit" class="datLich">ĐẶT LỊCH KHÁM</button>
+            </div>
+        </div>
+    </div>
+</div>

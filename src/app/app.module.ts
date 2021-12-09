@@ -8,6 +8,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { TrangchuComponent } from './component/trangchu/trangchu.component';
 import { Page404Component } from './component/page404/page404.component';
 import { MatkinhComponent } from './component/matkinh/matkinh.component';
+import { DatLichKhamComponent } from './component/dat-lich-kham/dat-lich-kham.component';
+
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { vi_VN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -21,8 +23,11 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { CtMatKinhComponent } from './component/ct-mat-kinh/ct-mat-kinh.component';
 import { ShowSPComponent } from './component/show-sp/show-sp.component';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+
 
 registerLocaleData(vi);
 
@@ -36,7 +41,8 @@ registerLocaleData(vi);
     Page404Component,
     MatkinhComponent,
     CtMatKinhComponent,
-    ShowSPComponent
+    ShowSPComponent,
+    DatLichKhamComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,9 @@ registerLocaleData(vi);
     NzDropDownModule,
     NzCarouselModule,
     NzInputNumberModule,
-    LoadingBarRouterModule
+    LoadingBarRouterModule,
+    NzInputModule,
+    NzDatePickerModule
   ],
   providers: [{ provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]
