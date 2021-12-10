@@ -27,6 +27,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { GioHangComponent } from './component/gio-hang/gio-hang.component';
 
 
 registerLocaleData(vi);
@@ -42,7 +43,8 @@ registerLocaleData(vi);
     MatkinhComponent,
     CtMatKinhComponent,
     ShowSPComponent,
-    DatLichKhamComponent
+    DatLichKhamComponent,
+    GioHangComponent
   ],
   imports: [
     BrowserModule,

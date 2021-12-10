@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row duongDan mb-5">
+        <p><b>SẢN PHẨM MẮT KÍNH/ </b> <b style="color: #01A0C7;">GIỎ HÀNG</b></p>
+    </div>
+    <div class="row gioHang mb-5">
+        <div class="col-12">
+            <div class="container-fluid khung">
+                <div class="row vien">
+                    <div class="col-md-2 col-sm-12 text-center">Tên sản phẩm</div>
+                    <div class="col-md-2 col-sm-12 text-center">Hình ảnh</div>
+                    <div class="col-md-2 col-sm-12 text-center">Giá bán</div>
+                    <div class="col-md-2 col-sm-12 text-center">Số lượng</div>
+                    <div class="col-md-2 col-sm-12 text-center">Thành tiền</div>
+                    <div class="col-md-2 col-sm-12 text-center">Thao tác</div>
+                </div>
+                <div class="row donHang mb-3 mt-3" *ngFor="let item of data1.slice(0, 3);">
+                    <div class="col-md-2 col-sm-12">{{item.title}}1</div>
+                    <div class="col-md-2 col-sm-12 text-center">{{item.img}}</div>  
+                    <div class="col-md-2 col-sm-12 text-center">{{item.giaBan}} Vnđ</div>
+                    <div class="col-md-2 col-sm-12 text-center">4</div>
+                    <div class="col-md-2 col-sm-12 text-center" style="color: red;">{{item.giaBan}} Vnđ</div>
+                    <div class="col-md-2 col-sm-12 text-center"><button id="btnXoa">Xóa</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-2 text-center mb-4"><button id="btnMua">MUA</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

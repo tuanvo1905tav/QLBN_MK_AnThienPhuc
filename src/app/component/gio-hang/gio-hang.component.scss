@@ -1,0 +1,43 @@
+.duongDan p {
+    border-bottom: 3px solid #01A0C7;
+    padding: 0px;
+    width: 700px;
+}
+
+.khung {
+    border: 1px solid rgb(199, 199, 199);
+}
+
+.vien,
+.donHang {
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.vien {
+    color: #01A0C7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#btnXoa {
+    width: 70px;
+    color: red;
+    margin-bottom: 10px;
+    border: 1px solid #01A0C7;
+    background-color: #fff;
+}
+
+#btnMua {
+    width: 100px;
+    color: #fff;
+    background-color: #01A0C7;
+    border: 0px;
+    padding: 5px;
+}
+
+#btnXoa:active {
+    background-color: red;
+    color: #fff;
+    border: 1px solid red;
+    transition: .3s;
+}
