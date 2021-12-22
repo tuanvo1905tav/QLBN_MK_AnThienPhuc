@@ -28,6 +28,14 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { GioHangComponent } from './component/gio-hang/gio-hang.component';
+import { VeChungToiComponent } from './component/ve-chung-toi/ve-chung-toi.component';
+import { HuongDanComponent } from './component/huong-dan/huong-dan.component';
+import { LienHeComponent } from './component/lien-he/lien-he.component';
+import { DvKhamMatComponent } from './component/dv-kham-mat/dv-kham-mat.component';
+import { DvDieuTriTatKhucXaComponent } from './component/dv-dieu-tri-tat-khuc-xa/dv-dieu-tri-tat-khuc-xa.component';
+import { DvPhauThuatKhucXaComponent } from './component/dv-phau-thuat-khuc-xa/dv-phau-thuat-khuc-xa.component';
+import { DvPhauThuatGlaucomaComponent } from './component/dv-phau-thuat-glaucoma/dv-phau-thuat-glaucoma.component';
+import { DvTaoHinhThamMiComponent } from './component/dv-tao-hinh-tham-mi/dv-tao-hinh-tham-mi.component';
 
 
 registerLocaleData(vi);
@@ -44,7 +52,15 @@ registerLocaleData(vi);
     CtMatKinhComponent,
     ShowSPComponent,
     DatLichKhamComponent,
-    GioHangComponent
+    GioHangComponent,
+    VeChungToiComponent,
+    HuongDanComponent,
+    LienHeComponent,
+    DvKhamMatComponent,
+    DvDieuTriTatKhucXaComponent,
+    DvPhauThuatKhucXaComponent,
+    DvPhauThuatGlaucomaComponent,
+    DvTaoHinhThamMiComponent
   ],
   imports: [
     BrowserModule,
