@@ -39,6 +39,7 @@ import { DvTaoHinhThamMiComponent } from './component/dv-tao-hinh-tham-mi/dv-tao
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 
 registerLocaleData(vi);
@@ -80,7 +81,8 @@ registerLocaleData(vi);
     NzFormModule,
     ReactiveFormsModule,
     NzButtonModule,
-    NzResultModule
+    NzResultModule,
+    NzNotificationModule
   ],
   providers: [{ provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]

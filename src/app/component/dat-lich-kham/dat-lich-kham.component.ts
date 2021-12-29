@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 
 @Component({
   selector: 'app-dat-lich-kham',
@@ -10,12 +11,13 @@ export class DatLichKhamComponent implements OnInit {
 
   validateForm!: FormGroup;
 
+
   submitForm(): void {
     console.log('submit', this.validateForm.value);
     this.validateForm.reset();
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private notification: NzNotificationService) { }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -28,5 +30,16 @@ export class DatLichKhamComponent implements OnInit {
       ndKham: [null, [Validators.required]],
       remember: [true]
     });
+  }
+
+  hienThongBao(): void {
+    this.notification
+      .blank(
+        'Thông báo',
+        'Đặt lịch khám thành công.'
+      )
+      .onClick.subscribe(() => {
+        console.log('notification clicked!');
+      });
   }
 }

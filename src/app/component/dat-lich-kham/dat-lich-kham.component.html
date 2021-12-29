@@ -1,8 +1,7 @@
 <div class="container">
     <div class="row duongDan">
         <p><b>BỆNH VIỆN MẮT/ </b> <b style="color: #01A0C7;">ĐẶT LỊCH KHÁM</b></p>
-    </div>
-
+    </div>  
     <div class="container-fluid cardTong">
         <div class="row px-0">
             <div class="col-md-6 col-sm-12 cardOne text-center">
@@ -53,13 +52,12 @@
 
                         <nz-input-group class="inputContent">
                             <p>Nội dung khám</p>
-                            <textarea formControlName="ndKham" nz-input rows="4" placeholder="Nhập nội dung khám" required></textarea>
+                            <textarea style="text-align: left;" formControlName="ndKham" nz-input rows="4" placeholder="Nhập nội dung khám" required></textarea>
                         </nz-input-group>
                     </nz-form-control>
 
                     <nz-form-control>
-                        <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button>
-                        <p style="color: #01A0C7; font-size: smaller;">Vui lòng điền đầy đủ các thông tin</p>
+                        <button nz-button nzType="primary" [disabled]="!validateForm.valid" (click)="hienThongBao()">ĐẶT LỊC KHÁM</button>
                     </nz-form-control>
                 </form>
             </div>
