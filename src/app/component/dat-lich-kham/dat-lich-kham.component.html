@@ -19,35 +19,49 @@
             </div>
             <div class="col-md-6 col-sm-12 cardTwo mt-3 text-center">
                 <h4>ĐẶT LỊCH KHÁM BỆNH</h4>
-                <div class="inputContent">
-                    <p>Họ tên</p>
-                    <input nz-input placeholder="Nhập họ tên" [(ngModel)]="hoTen" />
-                </div>
-                <div class="inputContent">
-                    <p>Ngày sinh</p>
-                    <nz-date-picker style="width: 100%;"></nz-date-picker>
-                </div>
-                <div class="inputContent">
-                    <p>Địa chỉ</p>
-                    <input nz-input placeholder="Nhập địa chỉ" [(ngModel)]="diaChi" />
-                </div>
-                <div class="inputContent">
-                    <p>Điện thoại</p>
-                    <input nz-input placeholder="Nhập số điện thoại" [(ngModel)]="dienThoai" />
-                </div>
-                <div class="inputContent">
-                    <p>Email</p>
-                    <input nz-input placeholder="abc@gmail.com" [(ngModel)]="email" />
-                </div>
-                <div class="inputContent">
-                    <p>Ngày đặt hẹn</p>
-                    <nz-date-picker style="width: 100%;"></nz-date-picker>
-                </div>
-                <div class="inputContent">
-                    <p>Nội dung khám</p>
-                    <textarea nz-input placeholder="Nhập triệu chứng của bạn" [nzAutosize]="{ minRows: 3, maxRows: 5 }"></textarea>
-                </div>
-                <button type="submit" class="datLich">ĐẶT LỊCH KHÁM</button>
+                <form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()" class="mb-3">
+                    <nz-form-control  nzErrorTip="Bạn phải nhập họ tên!">
+                        <nz-input-group class="inputContent">
+                            <p>Họ tên</p>
+                            <input nz-input type="text" style="text-align: left;" formControlName="hoTen" required/>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Ngày sinh</p>
+                            <nz-date-picker style="width: 100%;" formControlName="ngaySinh" required></nz-date-picker>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Địa chỉ</p>
+                            <input nz-input type="text" style="text-align: left;" formControlName="diaChi" required/>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Phone</p>
+                            <input nz-input type="text" style="text-align: left;" formControlName="sdt" required/>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Email</p>
+                            <input nz-input type="text" style="text-align: left;" formControlName="email" required/>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Ngày đặt hẹn</p>
+                            <nz-date-picker style="width: 100%;" formControlName="ngayDatHen" required></nz-date-picker>
+                        </nz-input-group>
+
+                        <nz-input-group class="inputContent">
+                            <p>Nội dung khám</p>
+                            <textarea formControlName="ndKham" nz-input rows="4" placeholder="Nhập nội dung khám" required></textarea>
+                        </nz-input-group>
+                    </nz-form-control>
+
+                    <nz-form-control>
+                        <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button>
+                        <p style="color: #01A0C7; font-size: smaller;">Vui lòng điền đầy đủ các thông tin</p>
+                    </nz-form-control>
+                </form>
             </div>
         </div>
     </div>

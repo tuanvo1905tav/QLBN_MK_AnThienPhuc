@@ -14,7 +14,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { vi_VN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import vi from '@angular/common/locales/vi';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -36,6 +36,9 @@ import { DvDieuTriTatKhucXaComponent } from './component/dv-dieu-tri-tat-khuc-xa
 import { DvPhauThuatKhucXaComponent } from './component/dv-phau-thuat-khuc-xa/dv-phau-thuat-khuc-xa.component';
 import { DvPhauThuatGlaucomaComponent } from './component/dv-phau-thuat-glaucoma/dv-phau-thuat-glaucoma.component';
 import { DvTaoHinhThamMiComponent } from './component/dv-tao-hinh-tham-mi/dv-tao-hinh-tham-mi.component';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzResultModule } from 'ng-zorro-antd/result';
 
 
 registerLocaleData(vi);
@@ -73,7 +76,11 @@ registerLocaleData(vi);
     NzInputNumberModule,
     LoadingBarRouterModule,
     NzInputModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzFormModule,
+    ReactiveFormsModule,
+    NzButtonModule,
+    NzResultModule
   ],
   providers: [{ provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]

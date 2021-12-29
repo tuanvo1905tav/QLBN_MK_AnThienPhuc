@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dat-lich-kham',
@@ -7,14 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatLichKhamComponent implements OnInit {
 
-  constructor() { }
+  validateForm!: FormGroup;
 
-  ngOnInit(): void {
+  submitForm(): void {
+    console.log('submit', this.validateForm.value);
+    this.validateForm.reset();
   }
 
-  hoTen: String = ""
-  diaChi: String = ""
-  dienThoai: String = ""
-  email: String = ""
+  constructor(private fb: FormBuilder) { }
 
+  ngOnInit(): void {
+    this.validateForm = this.fb.group({
+      hoTen: [null, [Validators.required]],
+      ngaySinh: [null, [Validators.required]],
+      diaChi: [null, [Validators.required]],
+      sdt: [null, [Validators.required]],
+      email: [null, [Validators.required]],
+      ngayDatHen: [null, [Validators.required]],
+      ndKham: [null, [Validators.required]],
+      remember: [true]
+    });
+  }
 }
