@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataMauService } from 'src/app/service/data-mau.service';
+import { SanPhamService } from 'src/app/service/san-pham.service';
+
 
 @Component({
   selector: 'app-show-sp',
@@ -8,10 +9,18 @@ import { DataMauService } from 'src/app/service/data-mau.service';
 })
 export class ShowSPComponent implements OnInit {
 
-  constructor(private sanPham: DataMauService) { }
+  readData: any;
+  constructor(private sanPhamMatKinh: SanPhamService) { }
 
   ngOnInit(): void {
+    this.getAllData();
   }
-  data = this.sanPham.sanPham
+  // data = this.sanPhamMatKinh
 
+  //Get all data
+  getAllData() {
+    this.sanPhamMatKinh.getAllData().subscribe((res) => {
+      this.readData = res.data;
+    });
+  }
 }

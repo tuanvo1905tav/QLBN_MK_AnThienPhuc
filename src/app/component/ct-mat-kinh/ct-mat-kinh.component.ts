@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataMauService } from 'src/app/service/data-mau.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SanPhamService } from 'src/app/service/san-pham.service';
 
 @Component({
   selector: 'app-ct-mat-kinh',
@@ -7,12 +8,31 @@ import { DataMauService } from 'src/app/service/data-mau.service';
   styleUrls: ['./ct-mat-kinh.component.scss']
 })
 export class CtMatKinhComponent implements OnInit {
+  getId: any;
+  readData: any;
+  spMauData: any;
 
-  constructor(private sanPham: DataMauService) { }
+  constructor(private sanPhamMatKinh: SanPhamService,
+    private router: ActivatedRoute,
+    private routers: Router) { }
 
   ngOnInit(): void {
+    this.getDataId();
+    this.getAllData();
   }
-  data1 = this.sanPham.sanPham
 
   demoValue = 1;
+
+  getAllData() {
+    this.sanPhamMatKinh.getAllData().subscribe((res) => {
+      this.spMauData = res.data;
+    });
+  }
+
+  getDataId() {
+    this.getId = this.router.snapshot.paramMap.get('maKinh');
+    this.sanPhamMatKinh.getDataId(this.getId).subscribe((res) => {
+      this.readData = res.data;
+    });
+  }
 }

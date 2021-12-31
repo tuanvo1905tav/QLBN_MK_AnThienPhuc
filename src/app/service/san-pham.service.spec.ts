@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataMauService } from './data-mau.service';
+import { SanPhamService } from './san-pham.service';
 
-describe('DataMauService', () => {
-  let service: DataMauService;
+describe('SanPhamService', () => {
+  let service: SanPhamService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DataMauService);
+    service = TestBed.inject(SanPhamService);
   });
 
   it('should be created', () => {

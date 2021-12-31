@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataMauService } from 'src/app/service/data-mau.service';
+import { SanPhamService } from 'src/app/service/san-pham.service';
+
 
 @Component({
   selector: 'app-trangchu',
@@ -8,9 +9,18 @@ import { DataMauService } from 'src/app/service/data-mau.service';
 })
 export class TrangchuComponent implements OnInit {
 
-  constructor(private sanPham: DataMauService) { }
+  readData: any;
+  constructor(private sanPhamMatKinh: SanPhamService) { }
 
   ngOnInit(): void {
+    this.getAllData();
   }
-  data1 = this.sanPham.sanPham
+  // data = this.sanPhamMatKinh
+
+  //Get all data
+  getAllData() {
+    this.sanPhamMatKinh.getAllData().subscribe((res) => {
+      this.readData = res.data;
+    });
+  }
 }

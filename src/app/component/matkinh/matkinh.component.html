@@ -8,18 +8,18 @@
 
     <div class="row mt-5">
         <div class="row mt-5 ">
-            <div class="col-xl-4 col-lg-12 text-center mb-5" *ngFor="let item of data.slice(0,9);">
+            <div class="col-xl-4 col-lg-12 text-center mb-5" *ngFor="let item of readData.slice(0,9);">
                 <div class="cardSP">
                   <div class="sanPham text-center">
                     <img src="../../../assets/images/kinh11.png" alt="Sản phẩm" width="80%" height="80%" style="padding-top: 30px;">
                   </div>
                   <div class="moTa">
                     <br>
-                    <h6>{{item.title}}</h6>
+                    <h6>{{item.tenKinh}}</h6>
                     <br>
                     <p><i class="fas fa-hand-holding-usd"></i>{{item.giaBan}}</p>
                     <br>
-                    <button id="muaSP" routerLink="/matkinh/chiTietMatKinh">MUA</button>
+                    <button id="muaSP" [routerLink]="['/matkinh/chiTietMatKinh', item.maKinh]">MUA</button>
                   </div>
                 </div>
               </div>

@@ -19,7 +19,7 @@ import { VeChungToiComponent } from './component/ve-chung-toi/ve-chung-toi.compo
 const routes: Routes = [
   { path: '', component: TrangchuComponent },
   { path: 'matkinh', component: MatkinhComponent },
-  { path: 'matkinh/chiTietMatKinh', component: CtMatKinhComponent },
+  { path: 'matkinh/chiTietMatKinh/:maKinh', component: CtMatKinhComponent },
   { path: 'matkinh/allSanPham', component: ShowSPComponent },
   { path: 'chiTietMatKinh/gioHang', component: GioHangComponent },
   { path: 'datLichKham', component: DatLichKhamComponent },
