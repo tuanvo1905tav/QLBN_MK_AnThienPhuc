@@ -26,6 +26,10 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 
+import { BenhNhanComponent } from './component/benhnhan/BenhNhan.component';
+import { QLMatKinhComponent } from './component/qlmatkinh/qlmatkinh.component';
+import { LoginComponent } from './component/login/login.component';
+
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { GioHangComponent } from './component/gio-hang/gio-hang.component';
 import { VeChungToiComponent } from './component/ve-chung-toi/ve-chung-toi.component';
@@ -40,6 +44,15 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzResultModule } from 'ng-zorro-antd/result';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+
+
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { BenhNhanService } from './service/benhnhan.service';
+import { QuanlibackendComponent } from './component/quanlibackend/quanlibackend.component';
 
 
 registerLocaleData(vi);
@@ -64,7 +77,11 @@ registerLocaleData(vi);
     DvDieuTriTatKhucXaComponent,
     DvPhauThuatKhucXaComponent,
     DvPhauThuatGlaucomaComponent,
-    DvTaoHinhThamMiComponent
+    DvTaoHinhThamMiComponent,
+    LoginComponent,
+    QLMatKinhComponent,
+    BenhNhanComponent,
+    QuanlibackendComponent
   ],
   imports: [
     BrowserModule,
@@ -82,9 +99,27 @@ registerLocaleData(vi);
     ReactiveFormsModule,
     NzButtonModule,
     NzResultModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzIconModule,
+    NzUploadModule,
+    NzModalModule,
+    AngularFireModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCOnHLMOyOgL9_mPpmH7wD8BIYKdD_t4Xo",
+      authDomain: "qlweb-c8a47.firebaseapp.com",
+      databaseURL: "https://qlweb-c8a47-default-rtdb.asia-southeast1.firebasedatabase.app/",
+      projectId: "qlweb-c8a47",
+      storageBucket: "qlweb-c8a47.appspot.com",
+      messagingSenderId: "461384426633",
+      appId: "1:461384426633:web:4decb24af83f4ac5631258",
+      measurementId: "G-TRF2PEYZ22"
+    }),
+    AngularFirestoreModule
+
+
   ],
-  providers: [{ provide: NZ_I18N, useValue: vi_VN }],
+  providers: [BenhNhanService, { provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

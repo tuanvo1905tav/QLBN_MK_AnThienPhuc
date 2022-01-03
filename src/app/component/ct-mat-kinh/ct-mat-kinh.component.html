@@ -2,16 +2,16 @@
     <div class="row duongDan mb-4">
         <p><b>SẢN PHẨM MẮT KÍNH/ </b> <b style="color: #01A0C7;">CHI TIẾT MẮT KÍNH</b></p>
     </div>
-    <div class="row">
+    <div class="row"  *ngFor="let item of readData">
         <div class="col-md-6 col-sm-12">
             <div class="cardX">
-                Hình ảnh
+                <img src="https://firebasestorage.googleapis.com/v0/b/qlweb-c8a47.appspot.com/o{{item.hinhSP}}?alt=media&token=11d84b6e-ba6e-46b1-944c-8f1138dc415c" alt="" width="100%" height="100%" style="border-radius: 15px;">
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
             <div class="cardX">
                 <div class="container-fluid">
-                    <div class="row" *ngFor="let item of readData">
+                    <div class="row">
                         <div class="col-12 mt-4">
                             <h5><b>{{item.tenKinh}}</b></h5>
                         </div>

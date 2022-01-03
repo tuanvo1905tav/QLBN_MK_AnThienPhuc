@@ -15,7 +15,9 @@
                 </div>
                 <div class="row donHang mb-3 mt-3" *ngFor="let item of readData">
                     <div class="col-md-2 col-sm-12">{{item.tenKinh}}</div>
-                    <div class="col-md-2 col-sm-12 text-center">Hình ảnh</div>  
+                    <div class="col-md-2 col-sm-12 text-center">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/qlweb-c8a47.appspot.com/o{{item.hinhSP}}?alt=media&token=11d84b6e-ba6e-46b1-944c-8f1138dc415c" alt="Sản phẩm" width="100px" height="100px" style="padding-bottom: 30px;">
+                    </div>  
                     <div class="col-md-2 col-sm-12 text-center"> {{item.giaBan}}Vnđ</div>
                     <div class="col-md-2 col-sm-12 text-center">{{item.doCan}}</div>
                     <div class="col-md-2 col-sm-12 text-center" style="color: red;"> {{item.giaBan * item.doCan}} Vnđ</div>

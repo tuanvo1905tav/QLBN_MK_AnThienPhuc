@@ -1,0 +1,100 @@
+a {
+  text-decoration: none;
+  margin: 0px;
+  padding: 3px;
+  color: #6b7373;
+}
+
+.name-logo {
+  color: #35b1d0;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: flex-start;
+}
+.hr-logo {
+  width: 2px;
+  height: 25px;
+}
+.logo img {
+  width: 55px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+.body {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 200px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+input {
+  border: none;
+  line-height: 25px;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+  padding: 10px;
+}
+
+.login-form {
+  margin: 30px;
+}
+
+.form-control1 {
+  display: flex;
+  width: 700px;
+  margin: auto;
+}
+
+.form-control2 {
+  display: flex;
+  width: 700px;
+  margin: auto;
+}
+
+.login-btn {
+  margin: auto;
+  display: block;
+  width: 700px;
+  border: none;
+  background-color: #35b1d0;
+  color: #fff;
+  line-height: 30px;
+  padding: 5px;
+}
+
+.footer {
+  margin-top: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbdbdb;
+}
+
+.info-footer {
+  color: #35b1d0;
+  line-height: 30px;
+}
+
+.copyright {
+  width: 15px;
+  height: 15px;
+  background-color: #dbdbdb;
+  color: #35b1d0;
+  margin-bottom: 3px;
+}

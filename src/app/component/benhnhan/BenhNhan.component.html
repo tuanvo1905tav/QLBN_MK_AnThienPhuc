@@ -1,0 +1,168 @@
+<h1 class="text-blue">Quản lí bệnh nhân</h1>
+<div class="container mt-5 text-blue bordered ma-left">
+    <div class="title">Danh sách bệnh nhân<i class="fas fa-plus-circle" (click)="showModal()"></i></div>
+    <table class="table text-blue">
+        <thead>
+            <tr>
+                <th scope="col">Mã số</th>
+                <th scope="col">Họ và tên</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Ngày đặt</th>
+                <th scope="col">Nội dung khám</th>
+                <th scope="col" class="none-border">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of readData">
+                <th class="td-mod" scope="row">{{item.maBN}}</th>
+                <td>{{item.tenBN}} </td>
+                <td>{{item.SDT}}</td>
+                <td>{{item.ngayDatHen}}</td>
+                <td>{{item.noiDungKham}}</td>
+                <td class="none-border">
+                    <button nz-button nzType="primary" (click)="showModal1()" [routerLink]="['/BenhNhan', item.maBN]"
+                        class="margin-5">Sửa</button>
+                    <button nz-button nzType="primary" (click)="showModal2()" [routerLink]="['/BenhNhan', item.maBN]" class="margin-5">Chi tiết</button>
+                    <button nz-button nzType="primary" nzDanger (click)="showDeleteConfirm()" [routerLink]="['/BenhNhan', item.maBN]">Delete</button>
+                </td>
+                <!-- Thêm bệnh nhân -->
+                <nz-modal nzWidth=800px [(nzVisible)]="isVisible" nzTitle="Thêm mắt kinh"
+                    (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+                    <form action="" [formGroup]="userForm">
+                        <ng-container *nzModalContent>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Họ tên</p>
+                                    <input nz-input placeholder="Nhập họ tên" formControlName="tenBN" />
+                                </div>
+                                <div class="inputContent">
+                                    <p>Điện thoại</p>
+                                    <input nz-input placeholder="Nhập số điện thoại" formControlName="SDT" />
+                                </div>
+                            </div>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Ngày sinh</p>
+                                    <nz-date-picker style="width: 100%;" formControlName="ngaySinh"></nz-date-picker>
+                                </div>
+
+                                <div class="inputContent">
+                                    <p>Email</p>
+                                    <input nz-input placeholder="abc@gmail.com" formControlName="Email" />
+                                </div>
+                            </div>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Địa chỉ</p>
+                                    <input nz-input placeholder="Nhập địa chỉ" formControlName="diaChi" />
+                                </div>
+                                <div class="inputContent">
+                                    <p>Ngày đặt hẹn</p>
+                                    <nz-date-picker style="width: 100%;" formControlName="ngayDatHen"></nz-date-picker>
+                                </div>
+                            </div>
+                            <div class="inputContent">
+                                <p>Nội dung khám</p>
+                                <textarea nz-input placeholder="Nhập triệu chứng của bạn"
+                                    [nzAutosize]="{ minRows: 3, maxRows: 5 }" formControlName="noiDungKham"></textarea>
+                            </div>
+                            <!-- <button type="submit" class="datLich">ĐẶT LỊCH KHÁM</button> -->
+                        </ng-container>
+                    </form>
+                </nz-modal>
+                <!-- Đây là cái sửa (hay còn gọi là modal :v) -->
+                <nz-modal nzWidth=800px [(nzVisible)]="isVisible1" nzTitle="Chỉnh sửa thông tin"
+                    (nzOnCancel)="handleCancel1()" (nzOnOk)="handleOk1()">
+                    <form action="" [formGroup]="userForm">
+                        <ng-container *nzModalContent>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Họ tên</p>
+                                    <input nz-input placeholder="Nhập họ tên" formControlName="tenBN" />
+                                </div>
+                                <div class="inputContent">
+                                    <p>Điện thoại</p>
+                                    <input nz-input placeholder="Nhập số điện thoại" formControlName="SDT" />
+                                </div>
+                            </div>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Ngày sinh</p>
+                                    <nz-date-picker style="width: 100%;" formControlName="ngaySinh"></nz-date-picker>
+                                </div>
+
+                                <div class="inputContent">
+                                    <p>Email</p>
+                                    <input nz-input placeholder="abc@gmail.com" formControlName="Email" />
+                                </div>
+                            </div>
+                            <div class="line1">
+                                <div class="inputContent">
+                                    <p>Địa chỉ</p>
+                                    <input nz-input placeholder="Nhập địa chỉ" formControlName="diaChi" />
+                                </div>
+                                <div class="inputContent">
+                                    <p>Ngày đặt hẹn</p>
+                                    <nz-date-picker style="width: 100%;" formControlName="ngayDatHen"></nz-date-picker>
+                                </div>
+                            </div>
+                            <div class="inputContent">
+                                <p>Nội dung khám</p>
+                                <textarea nz-input placeholder="Nhập triệu chứng của bạn"
+                                    [nzAutosize]="{ minRows: 3, maxRows: 5 }" formControlName="noiDungKham"></textarea>
+                            </div>
+                            <!-- <button type="submit" class="datLich">ĐẶT LỊCH KHÁM</button> -->
+                        </ng-container>
+                    </form>
+                </nz-modal>
+                <!-- Đây là phần nút chi tiết -->
+                <nz-modal nzWidth=800px [(nzVisible)]="isVisible2" nzTitle="Chỉnh sửa thông tin"
+                    (nzOnCancel)="handleCancel2()" (nzOnOk)="handleOk2()">
+                    <form action="" [formGroup]="userForm">
+                    <ng-container *nzModalContent >
+                        <div class="line1">
+                            <div class="inputContent">
+                                <p>Tên bệnh nhân</p>
+                                <input nz-input placeholder="Nhập họ tên" formControlName="tenBN" readonly/>
+                            </div>
+                            <div class="inputContent">
+                                <p>Số điện thoại</p>
+                                <input nz-input placeholder="Nhập số điện thoại" formControlName="SDT" readonly/>
+                            </div>
+
+                        </div>
+                        <div class="line1">
+                            <div class="inputContent">
+                                <p>Ngày sinh</p>
+                                <nz-date-picker style="width: 100%;" formControlName="ngaySinh" nzInputReadOnly></nz-date-picker>
+                            </div>
+
+                            <div class="inputContent">
+                                <p>Email</p>
+                                <input nz-input placeholder="abc@gmail.com" formControlName="Email" readonly/>
+                            </div>
+                        </div>
+                        <div class="line1">
+                            <div class="inputContent">
+                                <p>Địa chỉ</p>
+                                <input nz-input placeholder="Nhập địa chỉ" formControlName="diaChi" readonly/>
+                            </div>
+                            <div class="inputContent">
+                                <p>Ngày đặt hẹn</p>
+                                <nz-date-picker style="width: 100%;" formControlName="ngayDatHen" nzInputReadOnly="false"></nz-date-picker>
+                            </div>
+                        </div>
+                        <div class="inputContent">
+                            <p>Nội dung khám</p>
+                            <textarea nz-input placeholder="Nhập triệu chứng của bạn"
+                                [nzAutosize]="{ minRows: 3, maxRows: 5 }" formControlName="noiDungKham"></textarea>
+                        </div>
+                        <!-- <button type="submit" class="datLich">ĐẶT LỊCH KHÁM</button> -->
+                    </ng-container>
+                </form>
+                </nz-modal>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="total ma-left">Tổng số bệnh nhân: </div>

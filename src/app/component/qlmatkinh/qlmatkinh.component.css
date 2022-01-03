@@ -1,0 +1,105 @@
+.ma-left{
+    margin-left:300px;
+}
+
+.text-blue{
+    color: #35b1d0;
+}
+
+h1{
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+.bordered{
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.title{
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+thead, tr{
+    border-bottom: 1px solid #cacaca;
+}
+
+th, td{
+    border-right: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+}
+
+.width{
+    width: 62px;
+}
+
+.none-border{
+    border-right: none;
+}
+
+td, .td-mod{
+    line-height: 31px;
+}
+
+.margin-5{
+    margin-right: 5px;
+}
+
+.button-restyle{
+    background-color: #35b1d0;
+    color: #fff;
+}
+
+.button-restyle:hover{
+    background-color: #83b9c7;
+}
+
+.total{
+    color: #35b1d0;
+    font-weight: 600;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+
+
+.re-modal{
+    /* padding: 10px; */
+    /* display: flex; */
+}
+
+.line1{
+    display: flex;
+}
+
+input{
+    width: 300px;
+    margin: -5px 90px 20px 0px;
+}
+
+p {
+    color: #35b1d0;
+}
+
+nz-date-picker{
+    width: 300px !important;
+    margin: -5px 90px 20px 0px;
+}
+
+i {
+    font-size: 20px;
+    margin-left: 1120px;
+}
+
+i:hover{
+    opacity: 0.7;
+    
+}
